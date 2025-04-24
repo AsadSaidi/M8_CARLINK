@@ -1,0 +1,103 @@
+/* CARLINK Custom Styles */
+
+:root {
+    --carlink-green: #1ec573;
+    --carlink-dark: #0f0f0f;
+}
+
+/* Override Bootstrap primary color with CARLINK green */
+.btn-primary {
+    background-color: var(--carlink-green);
+    border-color: var(--carlink-green);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #19a262;
+    border-color: #19a262;
+}
+
+.btn-outline-primary {
+    color: var(--carlink-green);
+    border-color: var(--carlink-green);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+    background-color: var(--carlink-green);
+    border-color: var(--carlink-green);
+}
+
+.text-primary {
+    color: var(--carlink-green) !important;
+}
+
+.bg-primary {
+    background-color: var(--carlink-green) !important;
+}
+
+/* Header styling */
+.navbar-brand img {
+    max-height: 40px;
+}
+
+/* Nav link styling */
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: var(--carlink-green);
+}
+
+/* Footer styling */
+.footer {
+    background-color: var(--carlink-dark);
+    color: #fff;
+    padding: 2rem 0;
+}
+
+/* Car card styling */
+.car-card {
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Price badge styling */
+.price-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-top-right-radius: 5px;
+}
+
+/* Reservation form styling */
+.reservation-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+/* Rating stars */
+.rating-stars .fas {
+    color: #ffc107;
+}
+
+/* Features badges */
+.feature-badge {
+    background-color: #e9ecef;
+    color: #495057;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 20px;
+    display: inline-block;
+}

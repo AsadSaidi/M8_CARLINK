@@ -1,0 +1,163 @@
+¡Genial! Aquí tienes el **prompt definitivo** para tu proyecto **CARLINK**, esta vez **incluyendo el uso de una API de coches (API Ninjas)** para poblar datos automáticamente en el sistema (por ejemplo, para mostrar opciones de marca/modelo al subir un coche o poblar coches de muestra para testing/demo):
+
+---
+
+### 🧠 **Prompt Completo para CARLINK con API de Coches Integrada**
+
+Quiero que actúes como desarrollador experto en frontend y backend utilizando solo las siguientes tecnologías:  
+✅ **HTML, CSS (Tailwind o Bootstrap), JavaScript, PHP y PostgreSQL**  
+(No usar React, Vue, Node.js ni frameworks SPA).
+
+---
+
+## 🚘 PROYECTO: **CARLINK**
+
+CARLINK es una plataforma web de alquiler de coches entre particulares.  
+Los usuarios pueden registrarse como:
+- **Propietarios** → publican coches, fijan precios y gestionan reservas.  
+- **Arrendatarios** → buscan coches, reservan y pagan desde la plataforma.
+
+### 🎨 Paleta de Colores
+- Color principal: `#10c875`
+
+---
+
+## 🧱 Tecnologías Permitidas
+- HTML5 + CSS3 (con Tailwind o Bootstrap)
+- JavaScript puro (sin frameworks)
+- PHP (para backend)
+- PostgreSQL (para base de datos)
+- Firebase Auth (opcional, para autenticación frontend)
+- Stripe o método simulado para pagos
+- **Integración con una API de coches externa** (ver abajo)
+
+---
+
+## 🔌 API Externa: [API Ninjas - Cars](https://api-ninjas.com/api/cars)
+Usaremos esta API para:
+- Obtener datos reales de vehículos por marca y modelo.
+- Poblar automáticamente campos al publicar coches.
+- Simular un catálogo de coches para pruebas o demos.
+
+**Ejemplo de uso:**
+```http
+GET https://api.api-ninjas.com/v1/cars?make=Toyota&model=Corolla
+Headers: X-Api-Key: TU_API_KEY
+```
+
+---
+
+## 📄 Vistas y Funcionalidades
+
+### 🔹 Vistas Generales
+1. **Home** 🏠  
+   - Barra de búsqueda por ubicación, marca, precio.  
+   - Coches destacados (pueden venir desde la API para demos).  
+   - Botón de login/registro.
+
+2. **Registro / Login** 🔑  
+   - Formulario con validación JS.  
+   - Opción para elegir rol (propietario o arrendatario).
+
+3. **Explorar Coches** 🚗  
+   - Listado de coches disponibles.  
+   - Filtros (ubicación, marca, precio, combustible...).  
+   - Enlace a vista de detalle.
+
+4. **Detalle del Coche** 📄  
+   - Fotos, descripción, precio/día.  
+   - Info del propietario.  
+   - Botón “Reservar”.
+
+---
+
+### 🔸 Vistas para Arrendatario
+5. **Reserva de Coche** 📆  
+   - Selección de fechas.  
+   - Integración con Stripe o simulación de pago.  
+   - Confirmación de reserva.
+
+6. **Dashboard del Usuario** 📊  
+   - Ver historial de reservas.  
+   - Estado de pagos.
+
+---
+
+### 🔹 Vistas para Propietario
+7. **Dashboard del Propietario** 🚗  
+   - Ver coches subidos, reservas, ingresos.
+
+8. **Publicar un Coche** 📤  
+   - Formulario para subir coche.  
+   - Campos auto-rellenables desde API (marca, modelo, etc.).  
+   - Subir fotos, fijar precio y disponibilidad.
+
+9. **Gestión de Reservas** 📋  
+   - Ver solicitudes.  
+   - Aceptar o rechazar reservas.
+
+---
+
+## 🧩 Base de Datos (PostgreSQL)
+
+### `usuarios`
+- id, nombre, email, contraseña, rol
+
+### `coches`
+- id, propietario_id, marca, modelo, precio_dia, combustible, fotos, descripción
+
+### `reservas`
+- id, coche_id, arrendatario_id, fecha_inicio, fecha_fin, estado
+
+---
+
+## ⚙️ Backend (PHP)
+- CRUD completo: usuarios, coches, reservas
+- Conexión PostgreSQL (PDO recomendado)
+- Validación y sesiones en PHP
+- Uso de CURL o file_get_contents para llamar a API Ninjas
+- Rutas protegidas según el rol
+
+---
+
+## 🎨 Frontend (Tailwind o Bootstrap)
+- Diseño responsive, limpio y accesible
+- Validaciones JS para formularios
+- Campos de formulario auto-completables desde API
+- Filtros interactivos y visualmente amigables
+
+---
+
+## 🧠 Extras (opcional)
+- Firebase Auth para login con Google
+- Stripe para pagos reales
+- Guardado en caché de respuestas de la API para eficiencia
+
+---
+
+## 📁 Estructura Sugerida
+```plaintext
+📁 carlink/
+├── views/ (HTML/PHP)
+├── assets/
+│   ├── css/ (Tailwind o Bootstrap)
+│   └── js/
+├── controllers/ (lógica PHP)
+├── models/ (consultas SQL y acceso API)
+├── uploads/ (fotos coches)
+├── config.php
+├── api/ (servicios API como /get-car-data.php)
+└── index.php
+```
+
+---
+
+## 🔄 Flujo de API en "Publicar Coche"
+1. El propietario elige marca.
+2. Se hace llamada a API para listar modelos.
+3. Se autocompleta formulario con info técnica del coche.
+4. El resto se rellena manualmente (precio, fotos, etc.).
+
+---
+
+¿Quieres que te genere ahora el archivo PHP que haga la llamada a la API y te devuelva modelos por marca? 😄

@@ -44,7 +44,7 @@ CARLINK es una plataforma que permite a los usuarios alquilar coches de manera s
 ## 🔧 Tecnologías Utilizadas
 
 ### 🖥️ **Frontend**
-✅ CSS
+✅ Bootstrap y CSS
 
 ### ⚙️ **Backend**
 ✅ PHP (servidor)

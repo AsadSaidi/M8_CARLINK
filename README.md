@@ -44,21 +44,16 @@ CARLINK es una plataforma que permite a los usuarios alquilar coches de manera s
 ## 🔧 Tecnologías Utilizadas
 
 ### 🖥️ **Frontend**
-✅ React.js + Next.js (SSR para mejor SEO y rendimiento)
-✅ Tailwind CSS (Diseño moderno y rápido)
-✅ ShadCN/UI o Material UI (Componentes preconstruidos)
+✅ CSS
 
 ### ⚙️ **Backend**
-✅ Node.js + Express.js (Rápido y escalable)
+✅ PHP (servidor)
 ✅ PostgreSQL (Base de datos relacional)
-✅ Prisma ORM (Gestión simplificada de la BD)
-✅ Autenticación con Firebase Auth o JWT
-✅ Pagos con Stripe
 
 ### 📡 **Hosting y Despliegue**
-✅ **Frontend:** Vercel o Netlify
-✅ **Backend:** Railway o DigitalOcean
-✅ **Base de Datos:** Supabase o AWS RDS
+✅ **Frontend:** Replit
+✅ **Backend:** Replit
+✅ **Base de Datos:** Replit
 
 ---
 
